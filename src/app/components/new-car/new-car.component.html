@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="dialog">
+    <div class="content">
+      <div class="header">
+        <h2 class="title">Crear nuevo coche</h2>
+      </div>
+      <div class="body">
+        <div class="form-group">
+          <label>Marca:</label>
+          <input class="form-control" type="text" [(ngModel)]="newCar.name" />
+        </div>
+        <div class="form-group">
+          <label>Ciudad:</label>
+          <input class="form-control" type="text" [(ngModel)]="newCar.city" />
+        </div>
+        <div class="form-group">
+          <label>Matrícula:</label>
+          <input class="form-control" type="text" (input)="filterData($event.target.value)" [(ngModel)]="newCar.carRegistration" />
+        </div>
+        <div class="form-group">
+          <label>Caballos:</label>
+          <input class="form-control" type="number" [(ngModel)]="newCar.carPower" />
+        </div>
+        <div class="form-group">
+          <label>Color:</label>
+          <input class="form-control" type="text" [(ngModel)]="newCar.color" />
+        </div>
+        <div class="form-group">
+          <label>Estilo:</label>
+          <input class="form-control" type="text" [(ngModel)]="newCar.style" />
+        </div>
+        <div class="form-group">
+          <label>Año:</label>
+          <input class="form-control" type="number" [(ngModel)]="newCar.year" />
+        </div>
+      </div>
+      <div class="footer">
+        <button type="button" class="btn btn-secondary button-cancel" (click)="cancelModal()">Cerrar</button>
+        <button type="button" class="btn btn-primary button-send" (click)="createCar()">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="message-error" *ngIf="showMessageError">
+  {{messageError}}
+</div>

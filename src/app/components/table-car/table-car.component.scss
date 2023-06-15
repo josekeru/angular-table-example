@@ -1,0 +1,116 @@
+:host {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    padding: 12px 20px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+    border: 1px solid black;
+  }
+
+  thead {
+    background-color: #f8f8f8;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+
+  tbody tr:hover {
+    background-color: #f0f0f0;
+  }
+
+  button {
+    margin-right: 8px;
+  }
+
+  .search-text {
+    display: flex;
+  }
+
+  .search {
+    margin-top: 5px;
+    margin-left: 9px;
+  }
+
+  .input-search {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 21px;
+  
+    &:focus {
+      outline: none;
+      border-color: #007bff;
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+  }
+
+  .header-button {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .button-new-car {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 100px
+  }
+
+  .button-new {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+
+  .title {
+    text-decoration: underline;
+  }
+
+  .button-edit {
+    padding: 10px 10px;
+    font-size: 12px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: goldenrod;
+    }
+  }
+
+  .button-delete {
+    padding: 10px 10px;
+    font-size: 12px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: goldenrod;
+    }
+  }
+
+  .table-container {
+    height: 800px;
+    border: 1px solid #ddd;
+    overflow-y: scroll;
+  }
+}

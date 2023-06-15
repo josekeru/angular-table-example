@@ -1,0 +1,63 @@
+<div class="container">
+  <div *ngIf="!openModalCreate && !openModalEdit && !openModalDetail">
+    <h2 class="title">Tabla de Coches</h2>
+    <div class="header-button">
+      <div class="search-text">
+        <div class="label">
+          <p>Búsqueda:</p>
+        </div>
+        <div class="search">
+          <input type="text" class="input-search" [(ngModel)]="searchText" placeholder="Buscar" />
+        </div>
+      </div>
+      <div class="button-new-car">
+        <button class="btn btn-primary button-new" (click)="openModalC()">
+          Crear nuevo coche
+        </button>
+      </div>
+    </div>
+    <div class="table-container">
+      <table class="table table-success table-striped">
+        <thead>
+          <tr>
+            <th (click)="sortBy('name')">Marca</th>
+            <th (click)="sortBy('city')">Ciudad</th>
+            <th (click)="sortBy('carRegistration')">Matrícula</th>
+            <th (click)="sortBy('carPower')">Caballos</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let car of carTable | filter: searchText; let i = index">
+            <td (click)="openDetail(car)">{{ car.name }}</td>
+            <td>{{ car.city }}</td>
+            <td>{{ car.carRegistration }}</td>
+            <td>{{ car.carPower }}</td>
+            <td>
+              <button class="button-edit" (click)="openModalE(car)">Editar</button>
+              <button class="button-delete" (click)="deleteCar(car.id)">Borrar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- cretae new car -->
+  <div *ngIf="openModalCreate">
+    <app-new-car (dataCarNew)="updateNewCar($event)" (isCloseNewCar)="updateCloseNewCar($event)" [carTable]="carTable">
+    </app-new-car>
+  </div>
+
+  <!-- edit car -->
+  <div *ngIf="openModalEdit">
+    <app-edit-car (isCloseEditCar)="updateCloseEditCar($event)" [carEdit]="carEdit" [carTable]="carTable">
+    </app-edit-car>
+  </div>
+
+  <!-- detail car -->
+  <div *ngIf="openModalDetail">
+    <app-detail-car (isCloseDetailCar)="updateCloseDetailCar($event)" [carSelected]="carSelected" [carTable]="carTable">
+    </app-detail-car>
+  </div>
+</div>

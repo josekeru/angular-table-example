@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="content">
+    <div class="header">
+      <h2 class="title">Detalle coche</h2>
+    </div>
+    <div class="body">
+      <table>
+        <thead>
+          <tr>
+            <th (click)="sortBy('name')">Marca</th>
+            <th (click)="sortBy('city')">Ciudad</th>
+            <th (click)="sortBy('carRegistration')">Matrícula</th>
+            <th (click)="sortBy('carPower')">Caballos</th>
+            <th (click)="sortBy('color')">Color</th>
+            <th (click)="sortBy('style')">Estilo</th>
+            <th (click)="sortBy('year')">Año</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ carSelected.name }}</td>
+            <td>{{ carSelected.city }}</td>
+            <td>{{ carSelected.carRegistration }}</td>
+            <td>{{ carSelected.carPower }}</td>
+            <td>{{ carSelected.color }}</td>
+            <td>{{ carSelected.style }}</td>
+            <td>{{ carSelected.year }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="footer">
+      <button type="button" class="btn btn-secondary button-cancel" (click)="cancelDetail()">Volver atrás</button>
+    </div>
+  </div>
+</div>

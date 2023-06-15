@@ -1,0 +1,74 @@
+{
+  "cars": [
+    {
+      "id": 3,
+      "name": "BMW",
+      "city": "Valencia",
+      "carRegistration": "9012-GHI",
+      "carPower": 205,
+      "color": "Verde",
+      "style": "Berlina",
+      "year": 2014
+    },
+    {
+      "id": 5,
+      "name": "wwss",
+      "city": "ddwed",
+      "carRegistration": "vv",
+      "carPower": 333,
+      "color": "Rojo",
+      "style": "Berlina",
+      "year": 2020
+    },
+    {
+      "id": 6,
+      "name": "nuevo4",
+      "city": "nuevo24",
+      "carRegistration": "nuevo34",
+      "carPower": 334,
+      "color": "Azul",
+      "style": "Deportivo",
+      "year": 2011
+    },
+    {
+      "id": 9,
+      "name": "ujm",
+      "city": "sa",
+      "carRegistration": "ds",
+      "carPower": 33,
+      "color": "Morado",
+      "style": "Deportivo",
+      "year": 2018
+    },
+    {
+      "id": 10,
+      "name": "cvb",
+      "city": "ghj",
+      "carRegistration": "uykyukuyk",
+      "carPower": 100,
+      "color": "Verde",
+      "style": "Deportivo",
+      "year": 2019
+    },
+    {
+      "id": 12,
+      "name": "nuevo",
+      "city": "coche",
+      "carRegistration": "matri",
+      "carPower": 900,
+      "color": "Negro",
+      "style": "Deportivo",
+      "year": 2005
+    },
+    {
+      "id": 13,
+      "name": "peugeot",
+      "city": "sanlucar",
+      "carRegistration": "59515-ASD",
+      "carPower": 150,
+      "color": "Verde",
+      "style": "Deportivo",
+      "year": 2022
+    }
+  ]
+}
